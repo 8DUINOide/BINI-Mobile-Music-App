@@ -1,0 +1,7 @@
+BINI Mobile Music App
+
+Description:
+A native Android music streaming app built with Kotlin, ExoPlayer, and Firebase, featuring Spotify-like playback, auto-play next song, and a custom UI dedicated to the F-Pop group BINI.
+
+Topics:
+android, kotlin, music-player, exoplayer, firebase, bini, spotify-clone, mvvm, mobile-app

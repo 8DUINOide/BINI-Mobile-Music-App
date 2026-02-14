@@ -18,7 +18,7 @@ class SongsListAdapter(private  val songIdList : List<String>) :
 
     class MyViewHolder(private val binding: SongListItemRecyclerRowBinding) : RecyclerView.ViewHolder(binding.root){
         //bind data with view
-        fun bindData(songId : String){
+        fun bindData(songId: String, position: Int, songIdList: List<String>) {
 
             FirebaseFirestore.getInstance().collection("songs")
                 .document(songId).get()
@@ -33,7 +33,7 @@ class SongsListAdapter(private  val songIdList : List<String>) :
                             )
                             .into(binding.songCoverImageView)
                         binding.root.setOnClickListener {
-                            MyExoplayer.startPlaying(binding.root.context,song)
+                            MyExoplayer.startPlaying(binding.root.context, song, position, songIdList)
                             it.context.startActivity(Intent(it.context, PlayerActivity::class.java))
                         }
                     }
@@ -52,7 +52,7 @@ class SongsListAdapter(private  val songIdList : List<String>) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.bindData(songIdList[position])
+        holder.bindData(songIdList[position], position, songIdList)
     }
 
 }
