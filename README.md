@@ -1,5 +1,9 @@
 # BINI Mobile Music App
 
+<div align="center">
+  <img src="app/src/main/res/drawable/logo.jpg" alt="App Icon" width="100"/>
+</div>
+
 A mobile music streaming application dedicated to the F-Pop girl group **BINI**. This app replicates the core functionality of Spotify, offering a seamless listening experience with a focus on BINI's discography.
 
 ## 📱 Try it Out (Demo)
